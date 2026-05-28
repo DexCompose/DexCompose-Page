@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <meta name="title" content="DexCompose - Anonymous Authors">
+  <meta name="description" content="DexCompose reuses frozen dexterous policies through finger-level action ownership and dual residual stabilizers, reaching 77.4% success on 16 composite tasks.">
+  <meta name="keywords" content="DexCompose, dexterous manipulation, policy composition, residual learning, finger allocation, Shadow Hand, Isaac Lab, robot learning">
+  <meta name="author" content="Anonymous Authors">
+  <meta name="robots" content="index, follow">
+  <meta name="language" content="English">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="DexCompose Project Page">
+  <meta property="og:title" content="DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand">
+  <meta property="og:description" content="A role-aware residual composition framework for reusing pretrained dexterous policies across multi-task manipulation.">
+  <meta property="og:url" content="./">
+  <meta property="og:image" content="static/images/social_preview.png">
+  <meta property="og:image:width" content="1200">
+  <meta property="og:image:height" content="630">
+  <meta property="og:image:alt" content="DexCompose research preview">
+  <meta property="article:published_time" content="2026-05-28T00:00:00.000Z">
+  <meta property="article:author" content="Anonymous Authors">
+  <meta property="article:section" content="Research">
+  <meta property="article:tag" content="Dexterous Manipulation">
+  <meta property="article:tag" content="Policy Composition">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand">
+  <meta name="twitter:description" content="DexCompose composes pretrained full-hand policies using finger attribution, action ownership, and dual residual stabilization.">
+  <meta name="twitter:image" content="static/images/social_preview.png">
+  <meta name="twitter:image:alt" content="DexCompose research preview">
+
+  <meta name="citation_title" content="DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand">
+  <meta name="citation_author" content="Anonymous Authors">
+  <meta name="citation_publication_date" content="2026">
+  <meta name="citation_pdf_url" content="static/pdfs/dexcompose.pdf">
+
+  <meta name="theme-color" content="#0f766e">
+  <meta name="msapplication-TileColor" content="#0f766e">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="default">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://ajax.googleapis.com">
+  <link rel="preconnect" href="https://cdn.jsdelivr.net">
+
+  <title>DexCompose - Anonymous Authors | Academic Research</title>
+
+  <link rel="icon" type="image/x-icon" href="static/images/favicon.ico">
+  <link rel="apple-touch-icon" href="static/images/favicon.ico">
+
+  <link rel="stylesheet" href="static/css/bulma.min.css">
+  <link rel="stylesheet" href="static/css/index.css">
+
+  <link rel="preload" href="static/css/bulma-carousel.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/bulma-slider.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="static/css/fontawesome.all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+  <link rel="preload" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+
+  <noscript>
+    <link rel="stylesheet" href="static/css/bulma-carousel.min.css">
+    <link rel="stylesheet" href="static/css/bulma-slider.min.css">
+    <link rel="stylesheet" href="static/css/fontawesome.all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/jpswalsh/academicons@1/css/academicons.min.css">
+  </noscript>
+
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <script defer src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script defer src="static/js/fontawesome.all.min.js"></script>
+  <script defer src="static/js/bulma-carousel.min.js"></script>
+  <script defer src="static/js/bulma-slider.min.js"></script>
+  <script defer src="static/js/index.js"></script>
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "ScholarlyArticle",
+    "headline": "DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand",
+    "description": "DexCompose is a role-aware residual composition framework that enables the reuse of pretrained dexterous policies through explicit finger-level action ownership.",
+    "author": [
+      {
+        "@type": "Person",
+        "name": "Anonymous Authors",
+        "affiliation": {
+          "@type": "Organization",
+          "name": "Anonymous Institution"
+        }
+      }
+    ],
+    "datePublished": "2026-05-28",
+    "url": "./",
+    "image": "static/images/social_preview.png",
+    "keywords": ["dexterous manipulation", "policy composition", "residual learning", "finger allocation", "robot learning"],
+    "abstract": "Dexterous manipulation policies can solve individual skills, but composing them to perform multiple tasks with a single hand remains difficult. DexCompose introduces finger-level action ownership and dual residual stabilization to reuse pretrained full-hand policies across composite manipulation tasks.",
+    "citation": "@misc{dexcompose2026, title={DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand}, author={Anonymous Authors}, year={2026}, note={Manuscript under review}}",
+    "isAccessibleForFree": true,
+    "mainEntity": {
+      "@type": "WebPage",
+      "@id": "./"
+    },
+    "about": [
+      {
+        "@type": "Thing",
+        "name": "Dexterous Manipulation"
+      },
+      {
+        "@type": "Thing",
+        "name": "Policy Composition"
+      }
+    ]
+  }
+  </script>
+</head>
+<body>
+  <button class="scroll-to-top" onclick="scrollToTop()" title="Scroll to top" aria-label="Scroll to top">
+    <i class="fas fa-chevron-up"></i>
+  </button>
+
+  <main id="main-content">
+    <section class="hero publication-header">
+      <div class="hero-body">
+        <div class="container is-max-desktop">
+          <div class="columns is-centered">
+            <div class="column has-text-centered">
+              <p class="publication-venue">Manuscript Under Review</p>
+              <h1 class="title is-1 publication-title">
+                DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand
+              </h1>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Anonymous Authors</span>
+              </div>
+              <div class="is-size-5 publication-authors">
+                <span class="author-block">Dexterous Manipulation | Policy Composition | Residual Stabilization</span>
+              </div>
+
+              <div class="publication-links">
+                <span class="link-block">
+                  <a href="static/pdfs/dexcompose.pdf" target="_blank" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-file-pdf"></i></span>
+                    <span>Paper</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#method" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-project-diagram"></i></span>
+                    <span>Method</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#results" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-chart-bar"></i></span>
+                    <span>Results</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#BibTeX" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-quote-right"></i></span>
+                    <span>BibTeX</span>
+                  </a>
+                </span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="hero teaser">
+      <div class="container is-max-desktop">
+        <div class="hero-body">
+          <img class="teaser-image" src="static/images/dexcompose_teaser.png" alt="DexCompose composes dexterous skills through role-aware finger ownership" loading="eager">
+          <h2 class="subtitle has-text-centered teaser-caption">
+            DexCompose separates grasp preservation from downstream interaction through explicit finger ownership and dual residual stabilizers, reducing destructive interference when two pretrained full-hand policies share one dexterous hand.
+          </h2>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light">
+      <div class="container is-max-desktop">
+        <div class="columns is-centered has-text-centered">
+          <div class="column is-four-fifths">
+            <h2 class="title is-3">Abstract</h2>
+            <div class="content has-text-justified">
+              <p>
+                Dexterous manipulation policies can solve individual skills, but composing them to perform multiple tasks with a single hand remains difficult. Different tasks often compete over the same action dimensions, causing destructive interference between preserving an existing manipulation outcome and executing a new one. We propose DexCompose, a role-aware residual composition framework that enables the reuse of pretrained dexterous policies through explicit finger-level action ownership.
+              </p>
+              <p>
+                Given two pretrained full-hand policies, DexCompose first collects successful post-task states from the first skill and performs release tests over candidate finger masks to estimate which fingers are necessary for maintaining the established held state. It then trains a bounded residual stabilizer for task preservation and a context-aware residual that adapts the frozen downstream policy only within the action subspace assigned to the new task.
+              </p>
+              <p>
+                We evaluate the framework on 16 composite dexterous manipulation tasks spanning four object-retention skills and four downstream interactions. Our method achieves 77.4% average composite success, and ablation studies confirm that structural action ownership combined with dual asymmetric residuals is more effective than conventional policy chaining or unmasked residual correction.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="method">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Method</h2>
+        <div class="content has-text-justified">
+          <p>
+            DexCompose treats policy composition as an action allocation problem at the embodiment level. The framework discovers which fingers must preserve Task A, releases redundant fingers for Task B, and composes the two frozen policies using residual modules that are restricted to their assigned action subspaces.
+          </p>
+        </div>
+
+        <figure class="figure-frame">
+          <img src="static/images/dexcompose_pipeline.png" alt="DexCompose pipeline: finger attribution, action masks, and dual residual stabilizers" loading="lazy">
+          <figcaption>
+            Given two frozen single-task policies, DexCompose attributes fingers through release tests, expands the selected finger mask into action-space ownership masks, and executes the composed policy with a Task-A preservation residual and a Task-B adaptation residual.
+          </figcaption>
+        </figure>
+
+        <div class="method-points">
+          <div>
+            <h3>Finger Attribution</h3>
+            <p>Successful Task-A hold states are replayed while candidate finger subsets are released. Retention and clean-release diagnostics identify which fingers can be reassigned without losing the held object.</p>
+          </div>
+          <div>
+            <h3>Action Ownership</h3>
+            <p>The selected finger mask defines disjoint action subspaces: Task A controls preserved fingers, while Task B controls the wrist and released fingers.</p>
+          </div>
+          <div>
+            <h3>Dual Residual Stabilizer</h3>
+            <p>A bounded Task-A residual preserves the held state, and a Task-B residual adapts the downstream policy under the constraints imposed by the maintained grasp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section hero is-light" id="results">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Results</h2>
+
+        <div class="metric-strip">
+          <div class="metric">
+            <span class="metric-value">16</span>
+            <span class="metric-label">Composite Tasks</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">77.4%</span>
+            <span class="metric-label">Mean Success</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">+15.8 pp</span>
+            <span class="metric-label">Over Strongest Baseline</span>
+          </div>
+          <div class="metric">
+            <span class="metric-value">32 x 8</span>
+            <span class="metric-label">Rollouts per Pair</span>
+          </div>
+        </div>
+
+        <div class="content has-text-justified">
+          <p>
+            Experiments are conducted in Isaac Lab with a Shadow Hand. Task A contains four object-retention skills: GraspBall, PourMug, PickCan, and PickStick. Task B contains four downstream interactions: OpenDoor, PushButton, OpenMicrowave, and TurnOnSwitch. A rollout succeeds only when the Task-A object remains retained and Task B is completed.
+          </p>
+        </div>
+
+        <div class="table-container">
+          <table class="table is-fullwidth results-table">
+            <thead>
+              <tr>
+                <th>Method</th>
+                <th>Mean Composite Success</th>
+                <th>Role in Comparison</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Frozen Grasp</td>
+                <td>3.09 +/- 0.72</td>
+                <td>Sequential execution with frozen grasp-maintaining fingers</td>
+              </tr>
+              <tr>
+                <td>Decomposed Action Space</td>
+                <td>45.61 +/- 1.94</td>
+                <td>Fixed subspace split without release-test validation</td>
+              </tr>
+              <tr>
+                <td>Residual Learning</td>
+                <td>61.60 +/- 2.31</td>
+                <td>Unmasked residual correction over the combined policy</td>
+              </tr>
+              <tr>
+                <td>Ours-ZS</td>
+                <td>69.23 +/- 1.60</td>
+                <td>Finger allocation and Task-A stabilizer without Task-B residual</td>
+              </tr>
+              <tr class="is-selected-row">
+                <td>DexCompose</td>
+                <td>77.43 +/- 2.64</td>
+                <td>Finger attribution, action ownership, and dual residual stabilization</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="figure-frame">
+          <img src="static/images/dexcompose_preservation.png" alt="Base-policy preservation analysis for DexCompose" loading="lazy">
+          <figcaption>
+            DexCompose preserves both sides of the composed behavior, achieving A-side and B-side preservation ratios of 0.811 and 0.893 while maintaining the highest composite success.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container is-max-desktop">
+        <h2 class="title is-3 has-text-centered">Ablations and Diagnostics</h2>
+        <div class="content has-text-justified">
+          <p>
+            Component ablations show that the Task-A residual is essential for preserving the first manipulation outcome. Finger allocation and action masking reduce cross-task interference, while the Task-B residual and transition stage further improve execution robustness.
+          </p>
+        </div>
+
+        <div class="table-container">
+          <table class="table is-fullwidth results-table compact-table">
+            <thead>
+              <tr>
+                <th>Variant</th>
+                <th>Mean Success</th>
+                <th>Interpretation</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="is-selected-row">
+                <td>DexCompose</td>
+                <td>77.43 +/- 2.64</td>
+                <td>Full method</td>
+              </tr>
+              <tr>
+                <td>Ours-ZS</td>
+                <td>69.23 +/- 1.60</td>
+                <td>Removes Task-B residual</td>
+              </tr>
+              <tr>
+                <td>-Finger</td>
+                <td>54.52 +/- 2.09</td>
+                <td>Removes finger allocation</td>
+              </tr>
+              <tr>
+                <td>-Task-A</td>
+                <td>9.13 +/- 1.29</td>
+                <td>Removes Task-A residual stabilizer</td>
+              </tr>
+              <tr>
+                <td>-Mask</td>
+                <td>59.13 +/- 1.75</td>
+                <td>Removes action masking</td>
+              </tr>
+              <tr>
+                <td>-Trans.</td>
+                <td>69.02 +/- 2.07</td>
+                <td>Removes transition stage</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+
+        <figure class="figure-frame">
+          <img src="static/images/dexcompose_failures.png" alt="Failure-mode breakdown for DexCompose across task combinations" loading="lazy">
+          <figcaption>
+            Failure modes vary by downstream interaction. Transition failures dominate difficult combinations, TurnOnSwitch causes more preservation failures, and OpenMicrowave more often fails from limited downstream progress under constrained grasp configurations.
+          </figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <section class="hero is-small">
+      <div class="hero-body">
+        <div class="container">
+          <h2 class="title is-3">Paper</h2>
+          <iframe src="static/pdfs/dexcompose.pdf" width="100%" height="620" title="DexCompose paper PDF"></iframe>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="BibTeX">
+      <div class="container is-max-desktop content">
+        <div class="bibtex-header">
+          <h2 class="title">BibTeX</h2>
+          <button class="copy-bibtex-btn" onclick="copyBibTeX()" title="Copy BibTeX to clipboard">
+            <i class="fas fa-copy"></i>
+            <span class="copy-text">Copy</span>
+          </button>
+        </div>
+        <pre id="bibtex-code"><code>@misc{dexcompose2026,
+  title={DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand},
+  author={Anonymous Authors},
+  year={2026},
+  note={Manuscript under review}
+}</code></pre>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="columns is-centered">
+        <div class="column is-8">
+          <div class="content">
+            <p>
+              This page was built using the <a href="https://github.com/eliahuhorwitz/Academic-project-page-template" target="_blank">Academic Project Page Template</a>, adopted from the <a href="https://nerfies.github.io" target="_blank">Nerfies</a> project page.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+</body>
+</html>
