@@ -128,18 +128,17 @@
               <h1 class="title is-1 publication-title">
                 DexCompose: Reusing Dexterous Policies for Multi-Task Manipulation with a Single Hand
               </h1>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">Anonymous Authors</span>
-              </div>
-              <div class="is-size-5 publication-authors">
-                <span class="author-block">Dexterous Manipulation | Policy Composition | Residual Stabilization</span>
-              </div>
-
               <div class="publication-links">
                 <span class="link-block">
                   <a href="#method" class="external-link button is-normal is-rounded is-dark">
                     <span class="icon"><i class="fas fa-project-diagram"></i></span>
                     <span>Method</span>
+                  </a>
+                </span>
+                <span class="link-block">
+                  <a href="#demos" class="external-link button is-normal is-rounded is-dark">
+                    <span class="icon"><i class="fas fa-play-circle"></i></span>
+                    <span>Demos</span>
                   </a>
                 </span>
                 <span class="link-block">
@@ -164,7 +163,7 @@
     <section class="hero teaser">
       <div class="container is-max-desktop">
         <div class="hero-body">
-          <img class="teaser-image" src="static/images/dexcompose_teaser.png" alt="DexCompose composes dexterous skills through role-aware finger ownership" loading="eager">
+          <img class="teaser-image" src="static/images/dexcompose_teaser_cropped.png" alt="DexCompose composes dexterous skills through role-aware finger ownership" loading="eager">
           <h2 class="subtitle has-text-centered teaser-caption">
             DexCompose separates grasp preservation from downstream interaction through explicit finger ownership and dual residual stabilizers, reducing destructive interference when two pretrained full-hand policies share one dexterous hand.
           </h2>
@@ -203,7 +202,7 @@
         </div>
 
         <figure class="figure-frame">
-          <img src="static/images/dexcompose_pipeline.png" alt="DexCompose pipeline: finger attribution, action masks, and dual residual stabilizers" loading="lazy">
+          <img src="static/images/dexcompose_pipeline_cropped.png" alt="DexCompose pipeline: finger attribution, action masks, and dual residual stabilizers" loading="lazy">
           <figcaption>
             Given two frozen single-task policies, DexCompose attributes fingers through release tests, expands the selected finger mask into action-space ownership masks, and executes the composed policy with a Task-A preservation residual and a Task-B adaptation residual.
           </figcaption>
@@ -221,6 +220,442 @@
           <div>
             <h3>Dual Residual Stabilizer</h3>
             <p>A bounded Task-A residual preserves the held state, and a Task-B residual adapts the downstream policy under the constraints imposed by the maintained grasp.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section demo-section" id="demos">
+      <div class="container is-max-widescreen">
+        <h2 class="title is-3 has-text-centered">Video Demos</h2>
+        <div class="content demo-intro">
+          <p>
+            Demos are grouped by the behavior they illustrate: competent single-task base policies, release-test diagnostics for finger ownership, successful composite rollouts across all task pairs, and representative failure or ablation cases.
+          </p>
+        </div>
+
+        <div class="demo-tab-row" role="tablist" aria-label="Demo groups">
+          <button class="demo-tab-button is-active" type="button" role="tab" id="tab-base-policy-demos" aria-selected="true" aria-controls="base-policy-demos" data-demo-tab="base-policy-demos">
+            Base Policies
+          </button>
+          <button class="demo-tab-button" type="button" role="tab" id="tab-release-test-demos" aria-selected="false" aria-controls="release-test-demos" data-demo-tab="release-test-demos">
+            Release Tests
+          </button>
+          <button class="demo-tab-button" type="button" role="tab" id="tab-success-demo-grid" aria-selected="false" aria-controls="success-demo-grid" data-demo-tab="success-demo-grid">
+            Success Grid
+          </button>
+          <button class="demo-tab-button" type="button" role="tab" id="tab-failure-demo-grid" aria-selected="false" aria-controls="failure-demo-grid" data-demo-tab="failure-demo-grid">
+            Failure Cases
+          </button>
+        </div>
+
+        <div class="demo-panel is-active" id="base-policy-demos" role="tabpanel" aria-labelledby="tab-base-policy-demos" data-demo-panel>
+          <div class="demo-heading">
+            <p class="demo-kicker">Primitive Skills</p>
+            <h3>Base Policy Primitives</h3>
+            <p>
+              The primitive policies solve their own tasks before composition, so the challenge is controlled reuse under one shared hand action space.
+            </p>
+          </div>
+
+          <div class="demo-grid demo-grid-four">
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="GraspBall base policy">
+                <source src="static/videos/basepolicy_graspball.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag">Retention</span>
+                <h4>GraspBall</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick base policy">
+                <source src="static/videos/basepolicy_pickstick.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag">Retention</span>
+                <h4>PickStick</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickCan base policy">
+                <source src="static/videos/basepolicy_pickcan.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag">Retention</span>
+                <h4>PickCan</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug base policy">
+                <source src="static/videos/basepolicy_pourmug.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag">Retention</span>
+                <h4>PourMug</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="OpenDoor base policy">
+                <source src="static/videos/basepolicy_opendoor.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-alt">Downstream</span>
+                <h4>OpenDoor</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PushButton base policy">
+                <source src="static/videos/basepolicy_pushbutton.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-alt">Downstream</span>
+                <h4>PushButton</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="OpenMicrowave base policy">
+                <source src="static/videos/basepolicy_openmicrowave.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-alt">Downstream</span>
+                <h4>OpenMicrowave</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="TurnOnSwitch base policy">
+                <source src="static/videos/basepolicy_turnonswitch.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-alt">Downstream</span>
+                <h4>TurnOnSwitch</h4>
+              </div>
+            </article>
+          </div>
+        </div>
+
+        <div class="demo-panel" id="release-test-demos" role="tabpanel" aria-labelledby="tab-release-test-demos" data-demo-panel hidden>
+          <div class="demo-heading">
+            <p class="demo-kicker">Finger Ownership</p>
+            <h3>Release-Test Diagnostics</h3>
+            <p>
+              Each row compares one successful release mask with three failure cases for the same retained skill, illustrating how DexCompose chooses fingers that preserve the held object while freeing useful dexterity.
+            </p>
+          </div>
+
+          <div class="release-grid">
+            <div class="release-row">
+              <div class="release-label">
+                <span>Task A</span>
+                <h4>GraspBall</h4>
+              </div>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="GraspBall release test success">
+                  <source src="static/videos/releasetest-graspball-success.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Success</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="GraspBall release test failure 1">
+                  <source src="static/videos/releasetest-graspball-fail-01.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 1</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="GraspBall release test failure 2">
+                  <source src="static/videos/releasetest-graspball-fail-02.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 2</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="GraspBall release test failure 3">
+                  <source src="static/videos/releasetest-graspball-fail-03.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 3</h5></div>
+              </article>
+            </div>
+
+            <div class="release-row">
+              <div class="release-label">
+                <span>Task A</span>
+                <h4>PickStick</h4>
+              </div>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick release test success">
+                  <source src="static/videos/releasetest-pickstick-success.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Success</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick release test failure 1">
+                  <source src="static/videos/releasetest-pickstick-fail-01.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 1</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick release test failure 2">
+                  <source src="static/videos/releasetest-pickstick-fail-02.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 2</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick release test failure 3">
+                  <source src="static/videos/releasetest-pickstick-fail-03.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 3</h5></div>
+              </article>
+            </div>
+
+            <div class="release-row">
+              <div class="release-label">
+                <span>Task A</span>
+                <h4>PickCan</h4>
+              </div>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickCan release test success">
+                  <source src="static/videos/releasetest-pickcan-success.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Success</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickCan release test failure 1">
+                  <source src="static/videos/releasetest-pickcan-fail-01.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 1</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickCan release test failure 2">
+                  <source src="static/videos/releasetest-pickcan-fail-02.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 2</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickCan release test failure 3">
+                  <source src="static/videos/releasetest-pickcan-fail-03.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 3</h5></div>
+              </article>
+            </div>
+
+            <div class="release-row">
+              <div class="release-label">
+                <span>Task A</span>
+                <h4>PourMug</h4>
+              </div>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug release test success">
+                  <source src="static/videos/releasetest-pourmug-success.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Success</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug release test failure 1">
+                  <source src="static/videos/releasetest-pourmug-fail-01.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 1</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug release test failure 2">
+                  <source src="static/videos/releasetest-pourmug-fail-02.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 2</h5></div>
+              </article>
+              <article class="demo-card demo-card-compact">
+                <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug release test failure 3">
+                  <source src="static/videos/releasetest-pourmug-fail-03.mp4" type="video/mp4">
+                </video>
+                <div class="demo-card-body"><h5>Failure 3</h5></div>
+              </article>
+            </div>
+          </div>
+        </div>
+
+        <div class="demo-panel" id="success-demo-grid" role="tabpanel" aria-labelledby="tab-success-demo-grid" data-demo-panel hidden>
+          <div class="demo-heading">
+            <p class="demo-kicker">Composed Behaviors</p>
+            <h3>Composite Success Grid</h3>
+            <p>
+              DexCompose preserves the retained skill while assigning the wrist and released fingers to downstream interaction across four retained skills and four downstream tasks.
+            </p>
+          </div>
+
+          <div class="success-grid" role="table" aria-label="Composite success demo grid">
+            <div class="success-grid-corner" role="columnheader">Retained Skill</div>
+            <div class="success-grid-header" role="columnheader">OpenDoor</div>
+            <div class="success-grid-header" role="columnheader">PushButton</div>
+            <div class="success-grid-header" role="columnheader">OpenMicrowave</div>
+            <div class="success-grid-header" role="columnheader">TurnOnSwitch</div>
+
+            <div class="success-row-label" role="rowheader">PickStick</div>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick retained with OpenDoor">
+                <source src="static/videos/opendoor_pickstick_demo0_demo0_20260314_020249_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PickStick + OpenDoor</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick retained with PushButton">
+                <source src="static/videos/pushbutton_pickstick_demo0_demo0_20260314_022249_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PickStick + PushButton</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick retained with OpenMicrowave">
+                <source src="static/videos/openmicrowave_pickstick_demo0_demo0_20260314_020458_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PickStick + OpenMicrowave</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PickStick retained with TurnOnSwitch">
+                <source src="static/videos/turnonswitch_pickstick_rdemo4_ademo1_20260314_023710_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PickStick + TurnOnSwitch</h5></div>
+            </article>
+
+            <div class="success-row-label" role="rowheader">PourCan</div>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourCan retained with OpenDoor">
+                <source src="static/videos/opendoor_pourcan_demo0_demo0_20260314_020350_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PourCan + OpenDoor</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourCan retained with PushButton">
+                <source src="static/videos/pushbutton_pourcan_demo0_demo0_20260314_022338_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PourCan + PushButton</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourCan retained with OpenMicrowave">
+                <source src="static/videos/openmicrowave_pourcan_demo0_demo0_20260314_021609_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PourCan + OpenMicrowave</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourCan retained with TurnOnSwitch">
+                <source src="static/videos/turnonswitch_pourcan_rdemo0_ademo0_20260314_023110_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PourCan + TurnOnSwitch</h5></div>
+            </article>
+
+            <div class="success-row-label" role="rowheader">PourMug</div>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug retained with OpenDoor">
+                <source src="static/videos/opendoor_pourmug_demo0_demo0_20260314_021305_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PourMug + OpenDoor</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug retained with PushButton">
+                <source src="static/videos/pushbutton_pourmug_demo0_demo0_20260314_022729_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PourMug + PushButton</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug retained with OpenMicrowave">
+                <source src="static/videos/openmicrowave_pourmug_demo0_demo0_20260314_021909_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PourMug + OpenMicrowave</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="PourMug retained with TurnOnSwitch">
+                <source src="static/videos/turnonswitch_pourmug_rdemo2_ademo21_20260314_024413_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>PourMug + TurnOnSwitch</h5></div>
+            </article>
+
+            <div class="success-row-label" role="rowheader">Relocate</div>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="Relocate retained with OpenDoor">
+                <source src="static/videos/opendoor_relocate_demo0_demo0_20260314_021119_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>Relocate + OpenDoor</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="Relocate retained with PushButton">
+                <source src="static/videos/pushbutton_relocate_demo0_demo0_20260314_022518_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>Relocate + PushButton</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="Relocate retained with OpenMicrowave">
+                <source src="static/videos/openmicrowave_relocate_demo0_demo0_20260314_022137_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>Relocate + OpenMicrowave</h5></div>
+            </article>
+            <article class="demo-card demo-card-grid">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="Relocate retained with TurnOnSwitch">
+                <source src="static/videos/turnonswitch_relocate_rdemo2_ademo2_20260314_023450_zoom.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body"><h5>Relocate + TurnOnSwitch</h5></div>
+            </article>
+          </div>
+        </div>
+
+        <div class="demo-panel" id="failure-demo-grid" role="tabpanel" aria-labelledby="tab-failure-demo-grid" data-demo-panel hidden>
+          <div class="demo-heading">
+            <p class="demo-kicker">Comparison Cases</p>
+            <h3>Baseline and Ablation Failure Cases</h3>
+            <p>
+              Direct chaining and missing residual components expose the main failure modes: weak downstream contact, unstable transitions, or loss of the retained object.
+            </p>
+          </div>
+
+          <div class="demo-grid demo-grid-three">
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="Frozen grasp failure case 1">
+                <source src="static/videos/frozen-grasp-1.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-warning">Frozen Grasp</span>
+                <h4>Failure Case 1</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="Frozen grasp failure case 2">
+                <source src="static/videos/frozen-grasp-2.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-warning">Frozen Grasp</span>
+                <h4>Failure Case 2</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="Frozen grasp failure case 3">
+                <source src="static/videos/frozen-grasp-3.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-warning">Frozen Grasp</span>
+                <h4>Failure Case 3</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="Frozen grasp failure case 4">
+                <source src="static/videos/frozen-grasp-4.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-warning">Frozen Grasp</span>
+                <h4>Failure Case 4</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="No Task A residual ablation">
+                <source src="static/videos/No-taska.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-danger">Ablation</span>
+                <h4>No Task-A Residual</h4>
+              </div>
+            </article>
+            <article class="demo-card">
+              <video class="demo-video" controls muted loop playsinline preload="none" aria-label="No Task B residual ablation">
+                <source src="static/videos/No-taskb.mp4" type="video/mp4">
+              </video>
+              <div class="demo-card-body">
+                <span class="demo-tag demo-tag-danger">Ablation</span>
+                <h4>No Task-B Residual</h4>
+              </div>
+            </article>
           </div>
         </div>
       </div>
