@@ -1404,7 +1404,7 @@ a:focus {
   }
 }
 
-/* ICRA experiment update */
+/* Experiment sections */
 .section-nav {
   display: flex;
   justify-content: center;
@@ -1444,4 +1444,55 @@ a:focus {
 #results > .container, #three-skills > .container { width: 100%; min-width: 0; }
 @media screen and (max-width: 1023px) {
   #results > .container, #three-skills > .container { max-width: 100%; }
+}
+
+/* Quiet research-page polish: spacious cards and compact numerical tables. */
+:root {
+  --border-radius: 12px;
+  --border-radius-lg: 16px;
+  --gradient-accent: linear-gradient(90deg, #0f766e, #5eead4);
+}
+.publication-header {
+  background: radial-gradient(ellipse at 50% 0%, #edf9f6 0%, #ffffff 70%);
+}
+.publication-title { letter-spacing: -.035em; text-wrap: balance; }
+.publication-venue { border: 1px solid #dcebe7; }
+.section-nav { gap: .35rem; padding: .75rem 1rem; }
+.section-nav a { padding: .5rem .9rem; border-radius: 999px; transition: background .2s, color .2s; }
+.section-nav a:hover, .section-nav a:focus-visible { background: #eaf6f2; color: #115e59; }
+.update-label { letter-spacing: .08em; text-transform: uppercase; font-size: .72rem; }
+.overview-video { border: 1px solid var(--border-color); box-shadow: 0 12px 36px rgb(15 118 110 / .08); }
+.metric { border-color: #ddeae6; box-shadow: none; padding: 1.4rem 1rem; }
+.metric-value { letter-spacing: -.03em; font-variant-numeric: tabular-nums; }
+.metric-label { font-weight: 500; line-height: 1.5; }
+.results-table { border-collapse: separate; border-spacing: 0; box-shadow: none; }
+.results-table caption { font-weight: 600; color: #536a66; padding-bottom: .85rem; }
+.results-table thead th { background: #eff5f3; color: #47605b; font-size: .82rem; padding: .85rem 1rem; border-bottom: 1px solid #dce7e3; }
+.results-table tbody td, .results-table tbody th { padding: .85rem 1rem; border-bottom: 1px solid #edf1ef; }
+.results-table tbody tr:last-child > * { border-bottom: 0; }
+.results-table tbody tr:nth-child(even):not(.is-selected-row) > *:not(.method-ours) { background: #fafcfb; }
+.results-table tbody .is-selected-row > * { background: #e8f6f0; color: #115e59; font-weight: 700; }
+.results-table .is-selected-row > :first-child { box-shadow: inset 3px 0 #0f766e; }
+.summary-table { table-layout: fixed; }
+.summary-table th:first-child { width: 58%; }
+.summary-table td:last-child, .summary-table thead th:last-child { text-align: right; }
+.summary-table .numeric { font-size: 1.05rem; }
+.summary-table .uncertainty { color: #71847f; font-weight: 400; }
+.summary-table .is-selected-row .uncertainty { color: #3c7164; }
+.results-details { border-color: #dfe9e5; padding: 1.15rem 1.25rem; box-shadow: none; }
+.results-details summary { font-size: .95rem; }
+.demo-card { border-color: #e1e9e5; box-shadow: 0 3px 12px rgb(24 57 48 / .04); }
+.demo-card-body { padding: 1rem 1.1rem 1.15rem; }
+.demo-tag { font-size: .65rem; letter-spacing: .04em; }
+.per-task-table tbody td, .per-task-table tbody th { padding: .65rem .8rem; }
+@media screen and (max-width: 768px) {
+  .metric-strip { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .65rem; }
+  .metric { padding: 1rem .65rem; }
+  .metric-label { font-size: .72rem; }
+  .section-nav a { font-size: .8rem; padding: .4rem .65rem; }
+  .summary-table tbody th, .summary-table tbody td { padding: .85rem .7rem; }
+  .summary-table thead th { padding: .75rem .7rem; font-size: .75rem; }
+  .summary-table th:first-child { width: 57%; }
+  .summary-table .numeric { font-size: .9rem; }
+  .results-details { padding: 1rem; }
 }

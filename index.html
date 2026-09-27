@@ -147,7 +147,7 @@
 
     <nav class="section-nav" aria-label="Page sections"><a href="#overview-video">Overview video</a><a href="#method">Method</a><a href="#demos">Demos</a><a href="#results">Results</a><a href="#ablations">Ablations</a><a href="#three-skills">Three skills</a><a href="#real-world">Real world</a></nav>
     <section class="section" id="overview-video"><div class="container is-max-desktop">
-      <p class="update-label">Updated experiments &amp; demonstrations · September 2026</p>
+      <p class="update-label">Policy reuse · Dexterous manipulation</p>
       <h2 class="title is-3 has-text-centered">DexCompose in Three Minutes</h2>
       <p class="overview-intro">From frozen single-task policies to 16 compositions, three-skill sequences, and Franka–LEAP deployment.</p>
       <video class="demo-video overview-video" controls playsinline preload="none" poster="static/posters/icra_overview.png" aria-label="DexCompose narrated research overview"><source src="static/videos/icra_overview.mp4" type="video/mp4"><track kind="captions" src="static/videos/icra_overview.vtt" srclang="en" label="English"></video>
@@ -672,14 +672,13 @@
       <p>We evaluate 16 task pairs in Isaac Lab with a Shadow Hand: four object-retention skills (GraspBall, PourMug, PickCan, PickStick) and four downstream interactions (OpenDoor, PushButton, OpenMicrowave, TurnOnSwitch). A rollout succeeds only if Task A is preserved and Task B is completed.</p>
       <p>Each method is evaluated over <strong>13 random seeds × 32 rollouts per task</strong> (416 per task; 6,656 across all 16 pairs). We report mean ± sample standard deviation across seeds. For overall means, we first average all 16 tasks within each seed, then aggregate across seeds.</p>
       </div>
-<div class="table-container" tabindex="0" role="region" aria-label="Main comparison · ICRA Table I">
-      <table class="table is-fullwidth results-table">
-      <caption>Main comparison · ICRA Table I</caption>
+<div class="table-container" tabindex="0" role="region" aria-label="Main comparison">
+      <table class="table is-fullwidth results-table summary-table">
+      <caption>Main comparison</caption>
       <thead>
       <tr>
-      <th scope="col">Method / variant</th>
+      <th scope="col">Method</th>
       <th scope="col">Success (%) ± SD</th>
-      <th scope="col">Description</th>
       </tr>
       </thead>
       <tbody>
@@ -687,37 +686,31 @@
       <th scope="row">Frozen-Grasp</th>
       <td class="numeric">3.09 <span class="uncertainty">± 0.62</span>
       </td>
-      <td>Reference grasp held fixed; frozen Task-B policy controls the wrist.</td>
       </tr>
       <tr>
       <th scope="row">Decomposed</th>
       <td class="numeric">45.61 <span class="uncertainty">± 1.94</span>
       </td>
-      <td>Both policies retrained with subspace penalties; fixed masks, no residuals.</td>
       </tr>
       <tr>
       <th scope="row">Residual Learning</th>
       <td class="numeric">61.60 <span class="uncertainty">± 2.31</span>
       </td>
-      <td>Fixed-mask composition with one residual correcting all action dimensions.</td>
       </tr>
       <tr>
       <th scope="row">HANDFUL</th>
       <td class="numeric">43.57 <span class="uncertainty">± 1.57</span>
       </td>
-      <td>Resource-aware grasps that reserve fingers for downstream manipulation.</td>
       </tr>
       <tr>
       <th scope="row">Ours-ZS</th>
       <td class="numeric">69.23 <span class="uncertainty">± 1.60</span>
       </td>
-      <td>Task-aware allocation and Task-A stabilization; no Task-B residual.</td>
       </tr>
       <tr class="is-selected-row">
       <th scope="row">DexCompose</th>
       <td class="numeric">77.43 <span class="uncertainty">± 2.64</span>
       </td>
-      <td>Task-aware allocation, explicit action ownership, and both residuals.</td>
       </tr>
       </tbody>
       </table>
@@ -992,14 +985,13 @@
       <div class="content">
       <p>Removing the Task-A residual causes the largest drop in success. Task-aware allocation and action masking reduce interference; the Task-B residual and transition stage further improve execution. Stabilization with fixed allocation alone reaches 50.30%, compared with 77.43% for the full method.</p>
       </div>
-<div class="table-container" tabindex="0" role="region" aria-label="Component ablation · ICRA Table II">
-      <table class="table is-fullwidth results-table">
-      <caption>Component ablation · ICRA Table II</caption>
+<div class="table-container" tabindex="0" role="region" aria-label="Component ablation">
+      <table class="table is-fullwidth results-table summary-table">
+      <caption>Component ablation</caption>
       <thead>
       <tr>
-      <th scope="col">Method / variant</th>
+      <th scope="col">Variant</th>
       <th scope="col">Success (%) ± SD</th>
-      <th scope="col">Description</th>
       </tr>
       </thead>
       <tbody>
@@ -1007,43 +999,36 @@
       <th scope="row">DexCompose</th>
       <td class="numeric">77.43 <span class="uncertainty">± 2.64</span>
       </td>
-      <td>Full method.</td>
       </tr>
       <tr>
       <th scope="row">Ours-ZS</th>
       <td class="numeric">69.23 <span class="uncertainty">± 1.60</span>
       </td>
-      <td>Removes the Task-B residual.</td>
       </tr>
       <tr>
       <th scope="row">Stabilizer-only</th>
       <td class="numeric">50.30 <span class="uncertainty">± 2.80</span>
       </td>
-      <td>Fixed finger allocation and Task-A stabilization; no Task-B residual.</td>
       </tr>
       <tr>
       <th scope="row">w/o Allocation</th>
       <td class="numeric">54.52 <span class="uncertainty">± 2.09</span>
       </td>
-      <td>Replaces task-aware allocation with a fixed 3/2 finger split.</td>
       </tr>
       <tr>
       <th scope="row">w/o Task-A Residual</th>
       <td class="numeric">8.77 <span class="uncertainty">± 1.29</span>
       </td>
-      <td>Fixes preserved fingers at the reference configuration.</td>
       </tr>
       <tr>
       <th scope="row">w/o Mask</th>
       <td class="numeric">59.13 <span class="uncertainty">± 1.75</span>
       </td>
-      <td>Allows the Task-B residual to modify all action dimensions.</td>
       </tr>
       <tr>
       <th scope="row">w/o Transition</th>
       <td class="numeric">69.02 <span class="uncertainty">± 2.07</span>
       </td>
-      <td>Removes the transition stage between Tasks A and B.</td>
       </tr>
       </tbody>
       </table>
@@ -1344,13 +1329,13 @@
       </div><a href="static/data/ablations.csv" download>Download this table (CSV)</a>
       </details>
       <figure class="figure-frame"><a href="static/images/icra_preservation_failures.png" target="_blank" rel="noopener"><img src="static/images/icra_preservation_failures.png" alt="Task-A and Task-B preservation, preservation versus success, and failure stages for 16 task pairs." loading="lazy"></a>
-      <figcaption>Updated policy-preservation and failure analysis. DexCompose reaches 0.811 Task-A and 0.893 Task-B preservation, measured relative to standalone success. Failure shares use all rollouts as the denominator: Init (initial grasp), Trans. (transition), Drop (object loss during Task B), and B-fail (Task B fails with Task A preserved). OpenMicrowave has the highest transition-failure share; TurnOnSwitch has the highest Drop and B-fail shares. Select the figure to view it at full resolution.</figcaption>
+      <figcaption>Policy-preservation and failure analysis. DexCompose reaches 0.811 Task-A and 0.893 Task-B preservation, measured relative to standalone success. Failure shares use all rollouts as the denominator: Init (initial grasp), Trans. (transition), Drop (object loss during Task B), and B-fail (Task B fails with Task A preserved). OpenMicrowave has the highest transition-failure share; TurnOnSwitch has the highest Drop and B-fail shares. Select the figure to view it at full resolution.</figcaption>
       </figure>
       <h3 class="title is-4">Task-aware Mask Selection</h3>
       <p class="table-note">The LLM selector balances retention, clean release, and downstream finger utility. The heuristic maximizes retention subject to a minimum finger-release constraint. These results cover the four selected task pairs below.</p>
       <div class="table-container" tabindex="0" role="region" aria-label="Mask selection results">
       <table class="table is-fullwidth results-table">
-      <caption>Mask selection · ICRA Table III · success (%)</caption>
+      <caption>Mask selection · success (%)</caption>
       <thead>
       <tr>
       <th scope="col">Task pair</th>
@@ -1450,7 +1435,7 @@
       </div>
       </div>
       <div class="content">
-      <p>The ICRA study evaluates GraspBall and GraspCube composed with PushButton and OpenDrawer on a Franka arm equipped with a LEAP hand. The real-to-sim-to-real pipeline reconstructs object geometry from an RGB-D view with SAM 3D, estimates poses with FoundationPose, and instantiates the recovered scene in simulation for composed-policy execution.</p>
+      <p>We evaluate GraspBall and GraspCube composed with PushButton and OpenDrawer on a Franka arm equipped with a LEAP hand. The real-to-sim-to-real pipeline reconstructs object geometry from an RGB-D view with SAM 3D, estimates poses with FoundationPose, and instantiates the recovered scene in simulation for composed-policy execution.</p>
       </div>
 <div class="demo-grid demo-grid-two">
       <article class="demo-card">
@@ -1487,14 +1472,14 @@
       </article>
       </div>
       <details class="results-details">
-      <summary>Rollout sequences from the manuscript</summary>
+      <summary>Rollout sequences</summary>
       <figure class="figure-frame"><a href="static/images/icra_real_world_rollouts.png" target="_blank" rel="noopener"><img src="static/images/icra_real_world_rollouts.png" alt="Four Franka–LEAP task sequences from grasp acquisition to button pressing or drawer opening." loading="lazy"></a>
-      <figcaption>Franka–LEAP rollout figure from the ICRA manuscript. Each row follows one task pair from grasp acquisition to the downstream interaction. Select the figure to view it at full resolution.</figcaption>
+      <figcaption>Each row follows one task pair from grasp acquisition to the downstream interaction. Select the figure to view it at full resolution.</figcaption>
       </figure>
       </details>
       <div class="table-container" tabindex="0" role="region" aria-label="Real-world results">
       <table class="table is-fullwidth results-table">
-      <caption>Physical trial outcomes · ICRA Table IV</caption>
+      <caption>Physical trial outcomes</caption>
       <thead>
       <tr>
       <th scope="col">Task pair</th>
@@ -1553,7 +1538,7 @@
       <details class="results-details">
       <summary>Real-to-sim-to-real setup</summary>
       <figure class="figure-frame"><a href="static/images/icra_real_world_setup.png" target="_blank" rel="noopener"><img src="static/images/icra_real_world_setup.png" alt="Workspace, recovered geometry and poses, and reconstructed simulator scene." loading="lazy"></a>
-      <figcaption>Deployment pipeline from the ICRA manuscript. Select the figure to view it at full resolution.</figcaption>
+      <figcaption>Real-to-sim-to-real deployment pipeline. Select the figure to view it at full resolution.</figcaption>
       </figure>
       </details>
     </div>
