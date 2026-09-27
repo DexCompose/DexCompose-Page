@@ -1,0 +1,120 @@
+Task A,Task B,Method,Mean success (%),Sample SD (pp)
+GraspBall,OpenDoor,DexCompose,82.69,8.33
+GraspBall,OpenDoor,Ours-ZS,73.56,6.94
+GraspBall,OpenDoor,Stabilizer-only,70.91,7.37
+GraspBall,OpenDoor,w/o Allocation,73.80,7.16
+GraspBall,OpenDoor,w/o Task-A Residual,3.85,3.86
+GraspBall,OpenDoor,w/o Mask,67.07,8.23
+GraspBall,OpenDoor,w/o Transition,75.00,7.97
+GraspBall,PushButton,DexCompose,85.58,7.50
+GraspBall,PushButton,Ours-ZS,76.92,4.69
+GraspBall,PushButton,Stabilizer-only,65.38,8.51
+GraspBall,PushButton,w/o Allocation,70.43,9.43
+GraspBall,PushButton,w/o Task-A Residual,3.37,3.71
+GraspBall,PushButton,w/o Mask,68.75,8.37
+GraspBall,PushButton,w/o Transition,79.33,7.61
+GraspBall,OpenMicrowave,DexCompose,73.08,9.25
+GraspBall,OpenMicrowave,Ours-ZS,64.66,7.70
+GraspBall,OpenMicrowave,Stabilizer-only,41.11,5.96
+GraspBall,OpenMicrowave,w/o Allocation,43.51,13.29
+GraspBall,OpenMicrowave,w/o Task-A Residual,0.96,1.50
+GraspBall,OpenMicrowave,w/o Mask,56.73,10.66
+GraspBall,OpenMicrowave,w/o Transition,64.90,9.73
+GraspBall,TurnOnSwitch,DexCompose,71.88,8.93
+GraspBall,TurnOnSwitch,Ours-ZS,63.94,8.33
+GraspBall,TurnOnSwitch,Stabilizer-only,48.56,8.43
+GraspBall,TurnOnSwitch,w/o Allocation,54.33,8.80
+GraspBall,TurnOnSwitch,w/o Task-A Residual,0.96,1.97
+GraspBall,TurnOnSwitch,w/o Mask,53.37,7.49
+GraspBall,TurnOnSwitch,w/o Transition,63.22,7.56
+PourMug,OpenDoor,DexCompose,75.72,8.08
+PourMug,OpenDoor,Ours-ZS,66.59,8.78
+PourMug,OpenDoor,Stabilizer-only,58.17,6.32
+PourMug,OpenDoor,w/o Allocation,62.02,8.64
+PourMug,OpenDoor,w/o Task-A Residual,15.38,5.48
+PourMug,OpenDoor,w/o Mask,56.97,6.65
+PourMug,OpenDoor,w/o Transition,64.90,7.88
+PourMug,PushButton,DexCompose,85.58,7.28
+PourMug,PushButton,Ours-ZS,78.61,6.61
+PourMug,PushButton,Stabilizer-only,56.97,12.83
+PourMug,PushButton,w/o Allocation,62.74,8.70
+PourMug,PushButton,w/o Task-A Residual,17.79,6.55
+PourMug,PushButton,w/o Mask,67.55,6.82
+PourMug,PushButton,w/o Transition,76.68,6.07
+PourMug,OpenMicrowave,DexCompose,62.74,8.21
+PourMug,OpenMicrowave,Ours-ZS,52.40,7.67
+PourMug,OpenMicrowave,Stabilizer-only,32.45,8.22
+PourMug,OpenMicrowave,w/o Allocation,37.02,6.85
+PourMug,OpenMicrowave,w/o Task-A Residual,13.46,5.62
+PourMug,OpenMicrowave,w/o Mask,45.43,6.58
+PourMug,OpenMicrowave,w/o Transition,55.05,7.71
+PourMug,TurnOnSwitch,DexCompose,64.90,9.89
+PourMug,TurnOnSwitch,Ours-ZS,55.29,7.48
+PourMug,TurnOnSwitch,Stabilizer-only,37.26,6.69
+PourMug,TurnOnSwitch,w/o Allocation,40.62,9.29
+PourMug,TurnOnSwitch,w/o Task-A Residual,12.02,5.54
+PourMug,TurnOnSwitch,w/o Mask,44.23,7.09
+PourMug,TurnOnSwitch,w/o Transition,55.77,8.54
+PickCan,OpenDoor,DexCompose,79.09,6.04
+PickCan,OpenDoor,Ours-ZS,72.84,6.68
+PickCan,OpenDoor,Stabilizer-only,54.81,10.72
+PickCan,OpenDoor,w/o Allocation,57.21,11.30
+PickCan,OpenDoor,w/o Task-A Residual,14.66,5.32
+PickCan,OpenDoor,w/o Mask,60.82,8.43
+PickCan,OpenDoor,w/o Transition,70.43,6.82
+PickCan,PushButton,DexCompose,85.34,6.92
+PickCan,PushButton,Ours-ZS,77.64,5.08
+PickCan,PushButton,Stabilizer-only,50.96,8.69
+PickCan,PushButton,w/o Allocation,56.49,10.56
+PickCan,PushButton,w/o Task-A Residual,16.59,6.55
+PickCan,PushButton,w/o Mask,62.26,10.48
+PickCan,PushButton,w/o Transition,77.64,7.20
+PickCan,OpenMicrowave,DexCompose,72.36,11.82
+PickCan,OpenMicrowave,Ours-ZS,64.42,11.09
+PickCan,OpenMicrowave,Stabilizer-only,25.96,7.59
+PickCan,OpenMicrowave,w/o Allocation,30.29,10.16
+PickCan,OpenMicrowave,w/o Task-A Residual,11.78,5.87
+PickCan,OpenMicrowave,w/o Mask,51.68,10.49
+PickCan,OpenMicrowave,w/o Transition,62.02,9.95
+PickCan,TurnOnSwitch,DexCompose,65.38,6.81
+PickCan,TurnOnSwitch,Ours-ZS,58.41,6.55
+PickCan,TurnOnSwitch,Stabilizer-only,29.33,8.98
+PickCan,TurnOnSwitch,w/o Allocation,32.21,6.55
+PickCan,TurnOnSwitch,w/o Task-A Residual,11.54,4.84
+PickCan,TurnOnSwitch,w/o Mask,45.43,7.72
+PickCan,TurnOnSwitch,w/o Transition,57.93,6.20
+PickStick,OpenDoor,DexCompose,86.30,5.78
+PickStick,OpenDoor,Ours-ZS,78.37,5.63
+PickStick,OpenDoor,Stabilizer-only,69.95,8.80
+PickStick,OpenDoor,w/o Allocation,73.32,8.52
+PickStick,OpenDoor,w/o Task-A Residual,5.53,5.13
+PickStick,OpenDoor,w/o Mask,71.88,6.38
+PickStick,OpenDoor,w/o Transition,77.40,4.45
+PickStick,PushButton,DexCompose,86.54,4.84
+PickStick,PushButton,Ours-ZS,79.57,5.79
+PickStick,PushButton,Stabilizer-only,65.87,7.04
+PickStick,PushButton,w/o Allocation,70.91,9.23
+PickStick,PushButton,w/o Task-A Residual,6.25,4.23
+PickStick,PushButton,w/o Mask,68.27,7.95
+PickStick,PushButton,w/o Transition,78.12,4.94
+PickStick,OpenMicrowave,DexCompose,87.26,7.81
+PickStick,OpenMicrowave,Ours-ZS,77.88,6.69
+PickStick,OpenMicrowave,Stabilizer-only,49.04,7.26
+PickStick,OpenMicrowave,w/o Allocation,54.33,8.61
+PickStick,OpenMicrowave,w/o Task-A Residual,3.37,2.98
+PickStick,OpenMicrowave,w/o Mask,68.27,6.73
+PickStick,OpenMicrowave,w/o Transition,77.64,8.45
+PickStick,TurnOnSwitch,DexCompose,74.52,6.10
+PickStick,TurnOnSwitch,Ours-ZS,66.59,6.17
+PickStick,TurnOnSwitch,Stabilizer-only,48.08,7.50
+PickStick,TurnOnSwitch,w/o Allocation,53.12,10.36
+PickStick,TurnOnSwitch,w/o Task-A Residual,2.88,4.13
+PickStick,TurnOnSwitch,w/o Mask,57.45,7.71
+PickStick,TurnOnSwitch,w/o Transition,68.27,7.09
+Mean,All 16 tasks,DexCompose,77.43,2.64
+Mean,All 16 tasks,Ours-ZS,69.23,1.60
+Mean,All 16 tasks,Stabilizer-only,50.30,2.80
+Mean,All 16 tasks,w/o Allocation,54.52,2.09
+Mean,All 16 tasks,w/o Task-A Residual,8.77,1.29
+Mean,All 16 tasks,w/o Mask,59.13,1.75
+Mean,All 16 tasks,w/o Transition,69.02,2.07

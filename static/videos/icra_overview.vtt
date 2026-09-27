@@ -1,0 +1,209 @@
+WEBVTT
+
+1
+00:00:00.140 --> 00:00:05.786
+DexCompose reuses pretrained dexterous policies for multi-task manipulation with a single hand.
+
+2
+00:00:06.140 --> 00:00:08.330
+Idle degrees of freedom within a trained policy are
+
+3
+00:00:08.330 --> 00:00:10.995
+a reusable resource for composing additional behaviors.
+
+4
+00:00:10.995 --> 00:00:13.545
+DexCompose identifies finger-level redundancy through
+
+5
+00:00:13.545 --> 00:00:15.819
+release tests on successful held-object states.
+
+6
+00:00:16.140 --> 00:00:18.772
+The frozen-grasp baseline fixes the first skill’s finger
+
+7
+00:00:18.772 --> 00:00:21.772
+configuration while executing downstream wrist actions.
+
+8
+00:00:21.772 --> 00:00:24.866
+This is insufficient for reliable composition, motivating
+
+9
+00:00:24.866 --> 00:00:27.784
+explicit action ownership and residual stabilization.
+
+10
+00:00:28.140 --> 00:00:30.955
+We evaluate sixteen composite tasks spanning four
+
+11
+00:00:30.955 --> 00:00:33.923
+object-retention skills and four downstream interactions.
+
+12
+00:00:33.923 --> 00:00:37.759
+Both pretrained full-hand policies remain frozen during composition.
+
+13
+00:00:38.140 --> 00:00:40.773
+DexCompose combines training-free finger attribution,
+
+14
+00:00:40.773 --> 00:00:44.038
+explicit action ownership, and dual residual stabilization.
+
+15
+00:00:44.038 --> 00:00:46.726
+The two residuals correct the preserved reference and the frozen
+
+16
+00:00:46.726 --> 00:00:49.785
+downstream policy within their allocated action subspaces.
+
+17
+00:00:50.140 --> 00:00:54.005
+Release tests evaluate candidate masks from successful post-grasp states.
+
+18
+00:00:54.005 --> 00:00:57.782
+Preserved fingers replay the reference grasp while released fingers gradually open.
+
+19
+00:00:58.140 --> 00:01:00.400
+We measure object retention and clean release.
+
+20
+00:01:00.400 --> 00:01:03.363
+A task-aware allocation agent balances retention stability,
+
+21
+00:01:03.363 --> 00:01:05.824
+clean release quality, and residual dexterity.
+
+22
+00:01:06.140 --> 00:01:08.876
+DexCompose achieves seventy-seven point four percent
+
+23
+00:01:08.876 --> 00:01:11.770
+average composite success across sixteen tasks.
+
+24
+00:01:12.140 --> 00:01:15.810
+These compositions pair each object-retention skill with door opening.
+
+25
+00:01:15.810 --> 00:01:20.980
+Task A controls the preserved finger joints, while Task B controls the released fingers and wrist.
+
+26
+00:01:20.980 --> 00:01:23.219
+The two base policies remain frozen.
+
+27
+00:01:23.219 --> 00:01:25.880
+Lightweight residuals adapt their composition without
+
+28
+00:01:25.880 --> 00:01:28.807
+training a separate full policy for every task pair.
+
+29
+00:01:29.140 --> 00:01:32.238
+These compositions pair the same four skills with button pressing.
+
+30
+00:01:32.238 --> 00:01:36.271
+Selecting fingers requires considering their utility for the downstream task.
+
+31
+00:01:36.271 --> 00:01:41.280
+In the ball-grasping example, the allocation agent chooses a thumb, ring, and little-finger grasp,
+
+32
+00:01:41.280 --> 00:01:45.772
+keeping the index finger free for subsequent tasks instead of maximizing retention alone.
+
+33
+00:01:46.140 --> 00:01:49.293
+These compositions use microwave opening as the downstream skill.
+
+34
+00:01:49.293 --> 00:01:52.450
+The Task-A residual corrects the stored reference configuration.
+
+35
+00:01:52.450 --> 00:01:56.426
+The Task-B residual corrects the nominal action from the frozen downstream policy.
+
+36
+00:01:56.426 --> 00:01:59.798
+At every control step, both residuals are recomputed from the latest
+
+37
+00:01:59.798 --> 00:02:02.819
+observation and applied relative to their respective reference actions.
+
+38
+00:02:03.140 --> 00:02:06.169
+These compositions use switch actuation as the downstream skill.
+
+39
+00:02:06.169 --> 00:02:10.586
+Composite success requires completing Task B while preserving Task A throughout its execution.
+
+40
+00:02:10.586 --> 00:02:15.219
+Across all sixteen tasks, DexCompose achieves the best performance among the evaluated methods.
+
+41
+00:02:15.219 --> 00:02:17.487
+It improves mean success by eight point two percentage
+
+42
+00:02:17.487 --> 00:02:19.843
+points over the variant without the Task-B residual.
+
+43
+00:02:20.140 --> 00:02:23.549
+Removing the Task-A residual causes the most severe degradation.
+
+44
+00:02:23.549 --> 00:02:26.596
+Task-aware allocation and action masking reduce interference,
+
+45
+00:02:26.596 --> 00:02:29.821
+while the Task-B residual further improves execution refinement.
+
+46
+00:02:30.140 --> 00:02:33.006
+Three-skill sequences grasp two objects in succession, then
+
+47
+00:02:33.006 --> 00:02:35.998
+perform a downstream interaction while retaining both objects.
+
+48
+00:02:35.998 --> 00:02:40.660
+Release tests and the allocation agent assign disjoint finger masks across the three policies.
+
+49
+00:02:40.660 --> 00:02:45.818
+Composite success reaches sixty-two point one one percent when sufficient finger redundancy remains.
+
+50
+00:02:46.140 --> 00:02:50.435
+A real-to-sim-to-real pipeline transfers DexCompose to a Franka arm with a LEAP hand.
+
+51
+00:02:50.435 --> 00:02:55.797
+Across four composite tasks, it achieves fifty-nine successful executions in eighty physical trials.
+
+52
+00:02:56.140 --> 00:02:59.810
+DexCompose composes pretrained dexterous manipulation policies.

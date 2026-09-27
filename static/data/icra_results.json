@@ -1,0 +1,1188 @@
+{
+  "source": "ICRA manuscript, September 15, 2026 revision; Tables I\u2013IV and Section IV-D",
+  "source_sha256": "5072aa4a7c2756fa21c5b7fda11bc18f5cdf21b2415fd24cb8c41dde286ad5b0",
+  "protocol": {
+    "seeds": 13,
+    "rollouts_per_seed_per_task": 32,
+    "tasks": 16,
+    "uncertainty": "sample standard deviation across seeds; overall rows average the 16 tasks within each seed first"
+  },
+  "main": {
+    "methods": [
+      "Frozen-Grasp",
+      "Decomposed",
+      "Residual Learning",
+      "HANDFUL",
+      "Ours-ZS",
+      "DexCompose"
+    ],
+    "rows": [
+      {
+        "task_a": "GraspBall",
+        "task_b": "OpenDoor",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 38.94,
+            "sd": 2.43
+          },
+          "Residual Learning": {
+            "mean": 66.35,
+            "sd": 2.6
+          },
+          "HANDFUL": {
+            "mean": 52.16,
+            "sd": 6.68
+          },
+          "Ours-ZS": {
+            "mean": 73.56,
+            "sd": 6.94
+          },
+          "DexCompose": {
+            "mean": 82.69,
+            "sd": 8.33
+          }
+        }
+      },
+      {
+        "task_a": "GraspBall",
+        "task_b": "PushButton",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 7.69,
+            "sd": 2.06
+          },
+          "Decomposed": {
+            "mean": 42.31,
+            "sd": 2.06
+          },
+          "Residual Learning": {
+            "mean": 74.04,
+            "sd": 1.97
+          },
+          "HANDFUL": {
+            "mean": 73.56,
+            "sd": 3.96
+          },
+          "Ours-ZS": {
+            "mean": 76.92,
+            "sd": 4.69
+          },
+          "DexCompose": {
+            "mean": 85.58,
+            "sd": 7.5
+          }
+        }
+      },
+      {
+        "task_a": "GraspBall",
+        "task_b": "OpenMicrowave",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 34.62,
+            "sd": 2.69
+          },
+          "Residual Learning": {
+            "mean": 63.46,
+            "sd": 2.67
+          },
+          "HANDFUL": {
+            "mean": 43.51,
+            "sd": 9.41
+          },
+          "Ours-ZS": {
+            "mean": 64.66,
+            "sd": 7.7
+          },
+          "DexCompose": {
+            "mean": 73.08,
+            "sd": 9.25
+          }
+        }
+      },
+      {
+        "task_a": "GraspBall",
+        "task_b": "TurnOnSwitch",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 31.73,
+            "sd": 2.81
+          },
+          "Residual Learning": {
+            "mean": 55.29,
+            "sd": 2.96
+          },
+          "HANDFUL": {
+            "mean": 55.29,
+            "sd": 8.69
+          },
+          "Ours-ZS": {
+            "mean": 63.94,
+            "sd": 8.33
+          },
+          "DexCompose": {
+            "mean": 71.88,
+            "sd": 8.93
+          }
+        }
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "OpenDoor",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 36.54,
+            "sd": 2.35
+          },
+          "Residual Learning": {
+            "mean": 58.65,
+            "sd": 2.9
+          },
+          "HANDFUL": {
+            "mean": 38.46,
+            "sd": 9.32
+          },
+          "Ours-ZS": {
+            "mean": 66.59,
+            "sd": 8.78
+          },
+          "DexCompose": {
+            "mean": 75.72,
+            "sd": 8.08
+          }
+        }
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "PushButton",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 9.13,
+            "sd": 2.0
+          },
+          "Decomposed": {
+            "mean": 40.87,
+            "sd": 2.37
+          },
+          "Residual Learning": {
+            "mean": 71.63,
+            "sd": 2.0
+          },
+          "HANDFUL": {
+            "mean": 55.05,
+            "sd": 11.66
+          },
+          "Ours-ZS": {
+            "mean": 78.61,
+            "sd": 6.61
+          },
+          "DexCompose": {
+            "mean": 85.58,
+            "sd": 7.28
+          }
+        }
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "OpenMicrowave",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 32.21,
+            "sd": 2.67
+          },
+          "Residual Learning": {
+            "mean": 54.81,
+            "sd": 3.02
+          },
+          "HANDFUL": {
+            "mean": 24.04,
+            "sd": 7.26
+          },
+          "Ours-ZS": {
+            "mean": 52.4,
+            "sd": 7.67
+          },
+          "DexCompose": {
+            "mean": 62.74,
+            "sd": 8.21
+          }
+        }
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "TurnOnSwitch",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 30.29,
+            "sd": 2.67
+          },
+          "Residual Learning": {
+            "mean": 50.96,
+            "sd": 3.22
+          },
+          "HANDFUL": {
+            "mean": 35.82,
+            "sd": 9.85
+          },
+          "Ours-ZS": {
+            "mean": 55.29,
+            "sd": 7.48
+          },
+          "DexCompose": {
+            "mean": 64.9,
+            "sd": 9.89
+          }
+        }
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "OpenDoor",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 35.58,
+            "sd": 2.4
+          },
+          "Residual Learning": {
+            "mean": 56.73,
+            "sd": 2.81
+          },
+          "HANDFUL": {
+            "mean": 56.97,
+            "sd": 6.77
+          },
+          "Ours-ZS": {
+            "mean": 72.84,
+            "sd": 6.68
+          },
+          "DexCompose": {
+            "mean": 79.09,
+            "sd": 6.04
+          }
+        }
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "PushButton",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 8.65,
+            "sd": 2.27
+          },
+          "Decomposed": {
+            "mean": 39.9,
+            "sd": 2.27
+          },
+          "Residual Learning": {
+            "mean": 66.83,
+            "sd": 2.4
+          },
+          "HANDFUL": {
+            "mean": 75.48,
+            "sd": 9.19
+          },
+          "Ours-ZS": {
+            "mean": 77.64,
+            "sd": 5.08
+          },
+          "DexCompose": {
+            "mean": 85.34,
+            "sd": 6.92
+          }
+        }
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "OpenMicrowave",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 31.25,
+            "sd": 2.55
+          },
+          "Residual Learning": {
+            "mean": 53.85,
+            "sd": 2.9
+          },
+          "HANDFUL": {
+            "mean": 42.79,
+            "sd": 9.75
+          },
+          "Ours-ZS": {
+            "mean": 64.42,
+            "sd": 11.09
+          },
+          "DexCompose": {
+            "mean": 72.36,
+            "sd": 11.82
+          }
+        }
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "TurnOnSwitch",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 29.81,
+            "sd": 2.74
+          },
+          "Residual Learning": {
+            "mean": 55.29,
+            "sd": 2.67
+          },
+          "HANDFUL": {
+            "mean": 55.05,
+            "sd": 10.71
+          },
+          "Ours-ZS": {
+            "mean": 58.41,
+            "sd": 6.55
+          },
+          "DexCompose": {
+            "mean": 65.38,
+            "sd": 6.81
+          }
+        }
+      },
+      {
+        "task_a": "PickStick",
+        "task_b": "OpenDoor",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 83.17,
+            "sd": 1.58
+          },
+          "Residual Learning": {
+            "mean": 71.15,
+            "sd": 2.27
+          },
+          "HANDFUL": {
+            "mean": 18.75,
+            "sd": 8.93
+          },
+          "Ours-ZS": {
+            "mean": 78.37,
+            "sd": 5.63
+          },
+          "DexCompose": {
+            "mean": 86.3,
+            "sd": 5.78
+          }
+        }
+      },
+      {
+        "task_a": "PickStick",
+        "task_b": "PushButton",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 21.15,
+            "sd": 3.16
+          },
+          "Decomposed": {
+            "mean": 84.13,
+            "sd": 1.54
+          },
+          "Residual Learning": {
+            "mean": 76.44,
+            "sd": 2.06
+          },
+          "HANDFUL": {
+            "mean": 34.62,
+            "sd": 7.6
+          },
+          "Ours-ZS": {
+            "mean": 79.57,
+            "sd": 5.79
+          },
+          "DexCompose": {
+            "mean": 86.54,
+            "sd": 4.84
+          }
+        }
+      },
+      {
+        "task_a": "PickStick",
+        "task_b": "OpenMicrowave",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 0.0,
+            "sd": 0.0
+          },
+          "Decomposed": {
+            "mean": 76.92,
+            "sd": 2.03
+          },
+          "Residual Learning": {
+            "mean": 61.54,
+            "sd": 2.96
+          },
+          "HANDFUL": {
+            "mean": 15.38,
+            "sd": 6.81
+          },
+          "Ours-ZS": {
+            "mean": 77.88,
+            "sd": 6.69
+          },
+          "DexCompose": {
+            "mean": 87.26,
+            "sd": 7.81
+          }
+        }
+      },
+      {
+        "task_a": "PickStick",
+        "task_b": "TurnOnSwitch",
+        "values": {
+          "Frozen-Grasp": {
+            "mean": 2.88,
+            "sd": 1.54
+          },
+          "Decomposed": {
+            "mean": 61.54,
+            "sd": 2.35
+          },
+          "Residual Learning": {
+            "mean": 48.56,
+            "sd": 3.28
+          },
+          "HANDFUL": {
+            "mean": 20.19,
+            "sd": 6.2
+          },
+          "Ours-ZS": {
+            "mean": 66.59,
+            "sd": 6.17
+          },
+          "DexCompose": {
+            "mean": 74.52,
+            "sd": 6.1
+          }
+        }
+      }
+    ],
+    "mean": {
+      "Frozen-Grasp": {
+        "mean": 3.09,
+        "sd": 0.62
+      },
+      "Decomposed": {
+        "mean": 45.61,
+        "sd": 1.94
+      },
+      "Residual Learning": {
+        "mean": 61.6,
+        "sd": 2.31
+      },
+      "HANDFUL": {
+        "mean": 43.57,
+        "sd": 1.57
+      },
+      "Ours-ZS": {
+        "mean": 69.23,
+        "sd": 1.6
+      },
+      "DexCompose": {
+        "mean": 77.43,
+        "sd": 2.64
+      }
+    }
+  },
+  "ablation": {
+    "methods": [
+      "DexCompose",
+      "Ours-ZS",
+      "Stabilizer-only",
+      "w/o Allocation",
+      "w/o Task-A Residual",
+      "w/o Mask",
+      "w/o Transition"
+    ],
+    "rows": [
+      {
+        "task_a": "GraspBall",
+        "task_b": "OpenDoor",
+        "values": {
+          "DexCompose": {
+            "mean": 82.69,
+            "sd": 8.33
+          },
+          "Ours-ZS": {
+            "mean": 73.56,
+            "sd": 6.94
+          },
+          "Stabilizer-only": {
+            "mean": 70.91,
+            "sd": 7.37
+          },
+          "w/o Allocation": {
+            "mean": 73.8,
+            "sd": 7.16
+          },
+          "w/o Task-A Residual": {
+            "mean": 3.85,
+            "sd": 3.86
+          },
+          "w/o Mask": {
+            "mean": 67.07,
+            "sd": 8.23
+          },
+          "w/o Transition": {
+            "mean": 75.0,
+            "sd": 7.97
+          }
+        }
+      },
+      {
+        "task_a": "GraspBall",
+        "task_b": "PushButton",
+        "values": {
+          "DexCompose": {
+            "mean": 85.58,
+            "sd": 7.5
+          },
+          "Ours-ZS": {
+            "mean": 76.92,
+            "sd": 4.69
+          },
+          "Stabilizer-only": {
+            "mean": 65.38,
+            "sd": 8.51
+          },
+          "w/o Allocation": {
+            "mean": 70.43,
+            "sd": 9.43
+          },
+          "w/o Task-A Residual": {
+            "mean": 3.37,
+            "sd": 3.71
+          },
+          "w/o Mask": {
+            "mean": 68.75,
+            "sd": 8.37
+          },
+          "w/o Transition": {
+            "mean": 79.33,
+            "sd": 7.61
+          }
+        }
+      },
+      {
+        "task_a": "GraspBall",
+        "task_b": "OpenMicrowave",
+        "values": {
+          "DexCompose": {
+            "mean": 73.08,
+            "sd": 9.25
+          },
+          "Ours-ZS": {
+            "mean": 64.66,
+            "sd": 7.7
+          },
+          "Stabilizer-only": {
+            "mean": 41.11,
+            "sd": 5.96
+          },
+          "w/o Allocation": {
+            "mean": 43.51,
+            "sd": 13.29
+          },
+          "w/o Task-A Residual": {
+            "mean": 0.96,
+            "sd": 1.5
+          },
+          "w/o Mask": {
+            "mean": 56.73,
+            "sd": 10.66
+          },
+          "w/o Transition": {
+            "mean": 64.9,
+            "sd": 9.73
+          }
+        }
+      },
+      {
+        "task_a": "GraspBall",
+        "task_b": "TurnOnSwitch",
+        "values": {
+          "DexCompose": {
+            "mean": 71.88,
+            "sd": 8.93
+          },
+          "Ours-ZS": {
+            "mean": 63.94,
+            "sd": 8.33
+          },
+          "Stabilizer-only": {
+            "mean": 48.56,
+            "sd": 8.43
+          },
+          "w/o Allocation": {
+            "mean": 54.33,
+            "sd": 8.8
+          },
+          "w/o Task-A Residual": {
+            "mean": 0.96,
+            "sd": 1.97
+          },
+          "w/o Mask": {
+            "mean": 53.37,
+            "sd": 7.49
+          },
+          "w/o Transition": {
+            "mean": 63.22,
+            "sd": 7.56
+          }
+        }
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "OpenDoor",
+        "values": {
+          "DexCompose": {
+            "mean": 75.72,
+            "sd": 8.08
+          },
+          "Ours-ZS": {
+            "mean": 66.59,
+            "sd": 8.78
+          },
+          "Stabilizer-only": {
+            "mean": 58.17,
+            "sd": 6.32
+          },
+          "w/o Allocation": {
+            "mean": 62.02,
+            "sd": 8.64
+          },
+          "w/o Task-A Residual": {
+            "mean": 15.38,
+            "sd": 5.48
+          },
+          "w/o Mask": {
+            "mean": 56.97,
+            "sd": 6.65
+          },
+          "w/o Transition": {
+            "mean": 64.9,
+            "sd": 7.88
+          }
+        }
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "PushButton",
+        "values": {
+          "DexCompose": {
+            "mean": 85.58,
+            "sd": 7.28
+          },
+          "Ours-ZS": {
+            "mean": 78.61,
+            "sd": 6.61
+          },
+          "Stabilizer-only": {
+            "mean": 56.97,
+            "sd": 12.83
+          },
+          "w/o Allocation": {
+            "mean": 62.74,
+            "sd": 8.7
+          },
+          "w/o Task-A Residual": {
+            "mean": 17.79,
+            "sd": 6.55
+          },
+          "w/o Mask": {
+            "mean": 67.55,
+            "sd": 6.82
+          },
+          "w/o Transition": {
+            "mean": 76.68,
+            "sd": 6.07
+          }
+        }
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "OpenMicrowave",
+        "values": {
+          "DexCompose": {
+            "mean": 62.74,
+            "sd": 8.21
+          },
+          "Ours-ZS": {
+            "mean": 52.4,
+            "sd": 7.67
+          },
+          "Stabilizer-only": {
+            "mean": 32.45,
+            "sd": 8.22
+          },
+          "w/o Allocation": {
+            "mean": 37.02,
+            "sd": 6.85
+          },
+          "w/o Task-A Residual": {
+            "mean": 13.46,
+            "sd": 5.62
+          },
+          "w/o Mask": {
+            "mean": 45.43,
+            "sd": 6.58
+          },
+          "w/o Transition": {
+            "mean": 55.05,
+            "sd": 7.71
+          }
+        }
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "TurnOnSwitch",
+        "values": {
+          "DexCompose": {
+            "mean": 64.9,
+            "sd": 9.89
+          },
+          "Ours-ZS": {
+            "mean": 55.29,
+            "sd": 7.48
+          },
+          "Stabilizer-only": {
+            "mean": 37.26,
+            "sd": 6.69
+          },
+          "w/o Allocation": {
+            "mean": 40.62,
+            "sd": 9.29
+          },
+          "w/o Task-A Residual": {
+            "mean": 12.02,
+            "sd": 5.54
+          },
+          "w/o Mask": {
+            "mean": 44.23,
+            "sd": 7.09
+          },
+          "w/o Transition": {
+            "mean": 55.77,
+            "sd": 8.54
+          }
+        }
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "OpenDoor",
+        "values": {
+          "DexCompose": {
+            "mean": 79.09,
+            "sd": 6.04
+          },
+          "Ours-ZS": {
+            "mean": 72.84,
+            "sd": 6.68
+          },
+          "Stabilizer-only": {
+            "mean": 54.81,
+            "sd": 10.72
+          },
+          "w/o Allocation": {
+            "mean": 57.21,
+            "sd": 11.3
+          },
+          "w/o Task-A Residual": {
+            "mean": 14.66,
+            "sd": 5.32
+          },
+          "w/o Mask": {
+            "mean": 60.82,
+            "sd": 8.43
+          },
+          "w/o Transition": {
+            "mean": 70.43,
+            "sd": 6.82
+          }
+        }
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "PushButton",
+        "values": {
+          "DexCompose": {
+            "mean": 85.34,
+            "sd": 6.92
+          },
+          "Ours-ZS": {
+            "mean": 77.64,
+            "sd": 5.08
+          },
+          "Stabilizer-only": {
+            "mean": 50.96,
+            "sd": 8.69
+          },
+          "w/o Allocation": {
+            "mean": 56.49,
+            "sd": 10.56
+          },
+          "w/o Task-A Residual": {
+            "mean": 16.59,
+            "sd": 6.55
+          },
+          "w/o Mask": {
+            "mean": 62.26,
+            "sd": 10.48
+          },
+          "w/o Transition": {
+            "mean": 77.64,
+            "sd": 7.2
+          }
+        }
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "OpenMicrowave",
+        "values": {
+          "DexCompose": {
+            "mean": 72.36,
+            "sd": 11.82
+          },
+          "Ours-ZS": {
+            "mean": 64.42,
+            "sd": 11.09
+          },
+          "Stabilizer-only": {
+            "mean": 25.96,
+            "sd": 7.59
+          },
+          "w/o Allocation": {
+            "mean": 30.29,
+            "sd": 10.16
+          },
+          "w/o Task-A Residual": {
+            "mean": 11.78,
+            "sd": 5.87
+          },
+          "w/o Mask": {
+            "mean": 51.68,
+            "sd": 10.49
+          },
+          "w/o Transition": {
+            "mean": 62.02,
+            "sd": 9.95
+          }
+        }
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "TurnOnSwitch",
+        "values": {
+          "DexCompose": {
+            "mean": 65.38,
+            "sd": 6.81
+          },
+          "Ours-ZS": {
+            "mean": 58.41,
+            "sd": 6.55
+          },
+          "Stabilizer-only": {
+            "mean": 29.33,
+            "sd": 8.98
+          },
+          "w/o Allocation": {
+            "mean": 32.21,
+            "sd": 6.55
+          },
+          "w/o Task-A Residual": {
+            "mean": 11.54,
+            "sd": 4.84
+          },
+          "w/o Mask": {
+            "mean": 45.43,
+            "sd": 7.72
+          },
+          "w/o Transition": {
+            "mean": 57.93,
+            "sd": 6.2
+          }
+        }
+      },
+      {
+        "task_a": "PickStick",
+        "task_b": "OpenDoor",
+        "values": {
+          "DexCompose": {
+            "mean": 86.3,
+            "sd": 5.78
+          },
+          "Ours-ZS": {
+            "mean": 78.37,
+            "sd": 5.63
+          },
+          "Stabilizer-only": {
+            "mean": 69.95,
+            "sd": 8.8
+          },
+          "w/o Allocation": {
+            "mean": 73.32,
+            "sd": 8.52
+          },
+          "w/o Task-A Residual": {
+            "mean": 5.53,
+            "sd": 5.13
+          },
+          "w/o Mask": {
+            "mean": 71.88,
+            "sd": 6.38
+          },
+          "w/o Transition": {
+            "mean": 77.4,
+            "sd": 4.45
+          }
+        }
+      },
+      {
+        "task_a": "PickStick",
+        "task_b": "PushButton",
+        "values": {
+          "DexCompose": {
+            "mean": 86.54,
+            "sd": 4.84
+          },
+          "Ours-ZS": {
+            "mean": 79.57,
+            "sd": 5.79
+          },
+          "Stabilizer-only": {
+            "mean": 65.87,
+            "sd": 7.04
+          },
+          "w/o Allocation": {
+            "mean": 70.91,
+            "sd": 9.23
+          },
+          "w/o Task-A Residual": {
+            "mean": 6.25,
+            "sd": 4.23
+          },
+          "w/o Mask": {
+            "mean": 68.27,
+            "sd": 7.95
+          },
+          "w/o Transition": {
+            "mean": 78.12,
+            "sd": 4.94
+          }
+        }
+      },
+      {
+        "task_a": "PickStick",
+        "task_b": "OpenMicrowave",
+        "values": {
+          "DexCompose": {
+            "mean": 87.26,
+            "sd": 7.81
+          },
+          "Ours-ZS": {
+            "mean": 77.88,
+            "sd": 6.69
+          },
+          "Stabilizer-only": {
+            "mean": 49.04,
+            "sd": 7.26
+          },
+          "w/o Allocation": {
+            "mean": 54.33,
+            "sd": 8.61
+          },
+          "w/o Task-A Residual": {
+            "mean": 3.37,
+            "sd": 2.98
+          },
+          "w/o Mask": {
+            "mean": 68.27,
+            "sd": 6.73
+          },
+          "w/o Transition": {
+            "mean": 77.64,
+            "sd": 8.45
+          }
+        }
+      },
+      {
+        "task_a": "PickStick",
+        "task_b": "TurnOnSwitch",
+        "values": {
+          "DexCompose": {
+            "mean": 74.52,
+            "sd": 6.1
+          },
+          "Ours-ZS": {
+            "mean": 66.59,
+            "sd": 6.17
+          },
+          "Stabilizer-only": {
+            "mean": 48.08,
+            "sd": 7.5
+          },
+          "w/o Allocation": {
+            "mean": 53.12,
+            "sd": 10.36
+          },
+          "w/o Task-A Residual": {
+            "mean": 2.88,
+            "sd": 4.13
+          },
+          "w/o Mask": {
+            "mean": 57.45,
+            "sd": 7.71
+          },
+          "w/o Transition": {
+            "mean": 68.27,
+            "sd": 7.09
+          }
+        }
+      }
+    ],
+    "mean": {
+      "DexCompose": {
+        "mean": 77.43,
+        "sd": 2.64
+      },
+      "Ours-ZS": {
+        "mean": 69.23,
+        "sd": 1.6
+      },
+      "Stabilizer-only": {
+        "mean": 50.3,
+        "sd": 2.8
+      },
+      "w/o Allocation": {
+        "mean": 54.52,
+        "sd": 2.09
+      },
+      "w/o Task-A Residual": {
+        "mean": 8.77,
+        "sd": 1.29
+      },
+      "w/o Mask": {
+        "mean": 59.13,
+        "sd": 1.75
+      },
+      "w/o Transition": {
+        "mean": 69.02,
+        "sd": 2.07
+      }
+    }
+  },
+  "mask_selection": {
+    "rows": [
+      {
+        "task_a": "GraspBall",
+        "task_b": "OpenDoor",
+        "heuristic": 72.1,
+        "llm": 82.7
+      },
+      {
+        "task_a": "GraspBall",
+        "task_b": "TurnOnSwitch",
+        "heuristic": 63.5,
+        "llm": 71.9
+      },
+      {
+        "task_a": "PickCan",
+        "task_b": "OpenMicrowave",
+        "heuristic": 68.3,
+        "llm": 72.4
+      },
+      {
+        "task_a": "PourMug",
+        "task_b": "TurnOnSwitch",
+        "heuristic": 62.0,
+        "llm": 64.9
+      }
+    ],
+    "mean": {
+      "heuristic": 66.5,
+      "llm": 73.0
+    }
+  },
+  "three_skill": {
+    "success_percent": 62.11
+  },
+  "real_world": [
+    {
+      "task_a": "GraspBall",
+      "task_b": "PushButton",
+      "success": 16,
+      "fail_a_only": 2,
+      "fail_b_only": 1,
+      "fail_both": 1,
+      "trials": 20
+    },
+    {
+      "task_a": "GraspBall",
+      "task_b": "OpenDrawer",
+      "success": 13,
+      "fail_a_only": 2,
+      "fail_b_only": 4,
+      "fail_both": 1,
+      "trials": 20
+    },
+    {
+      "task_a": "GraspCube",
+      "task_b": "PushButton",
+      "success": 16,
+      "fail_a_only": 1,
+      "fail_b_only": 3,
+      "fail_both": 0,
+      "trials": 20
+    },
+    {
+      "task_a": "GraspCube",
+      "task_b": "OpenDrawer",
+      "success": 14,
+      "fail_a_only": 1,
+      "fail_b_only": 4,
+      "fail_both": 1,
+      "trials": 20
+    }
+  ]
+}

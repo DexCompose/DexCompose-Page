@@ -1403,3 +1403,45 @@ a:focus {
     box-shadow: none !important;
   }
 }
+
+/* ICRA experiment update */
+.section-nav {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: .55rem 1.3rem;
+  padding: 1rem 1.5rem;
+  border-block: 1px solid var(--border-color);
+  background: var(--background-primary);
+}
+.section-nav a { font-size: .9rem; font-weight: 600; color: var(--primary-color); }
+.update-label { color: var(--primary-color); font-size: .8rem; font-weight: 700; text-align: center; margin-bottom: .8rem; }
+.overview-intro { text-align: center; color: var(--text-secondary); margin-bottom: 1.5rem; }
+.overview-video { border-radius: var(--border-radius); object-fit: contain; box-shadow: var(--shadow-md); }
+.demo-grid-two { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+#three-skills .demo-video { object-fit: contain; }
+.results-details { margin: 1.5rem 0; border: 1px solid var(--border-color); border-radius: var(--border-radius); padding: 1rem; background: var(--background-primary); }
+.results-details summary { cursor: pointer; font-weight: 700; color: var(--primary-color); }
+.results-details[open] summary { margin-bottom: 1.2rem; }
+.table-note { margin: .8rem 0 1.2rem; color: var(--text-secondary); font-size: .9rem; line-height: 1.65; }
+.results-table caption { caption-side: top; text-align: left; color: var(--text-secondary); font-size: .85rem; padding: .6rem 0; }
+.results-table tbody th { background: transparent; }
+.results-table .numeric { white-space: nowrap; font-variant-numeric: tabular-nums; }
+.uncertainty { font-size: .85em; }
+.results-table .method-ours { color: var(--primary-color); font-weight: 700; background: #eefaf7; }
+.per-task-table { font-size: .8rem; }
+.per-task-table th, .per-task-table td { white-space: nowrap; }
+.table-container:focus-visible, summary:focus-visible, .section-nav a:focus-visible { outline: 3px solid var(--primary-color); outline-offset: 3px; }
+#real-world .results-table { min-width: 660px; }
+@media screen and (max-width: 768px) {
+  .demo-grid-two { grid-template-columns: 1fr; }
+  .results-table { font-size: .85rem; }
+  .results-table .numeric { font-size: .8rem; }
+  .metric-value { font-size: 1.35rem; }
+}
+@media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+/* Wide experiment tables must scroll inside the container on small screens. */
+#results > .container, #three-skills > .container { width: 100%; min-width: 0; }
+@media screen and (max-width: 1023px) {
+  #results > .container, #three-skills > .container { max-width: 100%; }
+}
